@@ -1,4 +1,4 @@
-# Maarittelydokumentti
+# Määrittelydokumentti
 
 Tavoitteena on siis tehdä luolastogeneraattoriin pohjautuva peli Javalla.
 Algoritmeja sen toteuttamiseen löytyy useita, mutta haluaisin varmaankin tehdä oman toteutuksen käyttämällä tietenkin apuna muita netistä löytyviä. 
