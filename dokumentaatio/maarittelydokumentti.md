@@ -10,7 +10,7 @@ Projektin suunnittelu on vielä kesken (päivitän tätä dokumenttia tarkemmill
 * Luolasto on jaettu tasoihin, joten joka kerrokselle tulee luoda oma luolasto.
 * Uusi luola generoituu siis hahmon liikkuessa uloskäynnille.
 
-Lisäksi, haluan että luolastossa on vähintää yksi vihollinen. Näinollen haluan myös luoda sille reitinhakualgoritmin (Dijkstra?). Se liikkuu aina kun pelaajakin liikkuu, tai se voiko se liikkua arvotaan.
+Lisäksi haluan että luolastossa on vähintää yksi vihollinen. Näinollen haluan myös luoda sille reitinhakualgoritmin (Dijkstra?). Se liikkuu aina kun pelaajakin liikkuu, tai se voiko se liikkua arvotaan.
 
 Laitan tähän tavoitteena olevat aika ja tilavaatimukset heti kun ne on selvillä.
 
