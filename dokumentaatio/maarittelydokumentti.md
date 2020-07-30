@@ -4,11 +4,10 @@
 Tavoitteena on siis tehdä luolastogeneraattoriin pohjautuva peli Javalla.
 Algoritmeja sen toteuttamiseen löytyy useita ja yksi jonka koin näppärän tuntuiseksi on [Binary space partitioning (BSP)](https://en.wikipedia.org/wiki/Binary_space_partitioning), (eli suomeksi [binäärinen avaruuden osiointi](https://fi.wikipedia.org/wiki/Binary_space_partitioning)). 
 Tämä sivu kertoo todella hyvin mistä asiassa on kyse:
+
 http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
 
 Eli ideana on jakaa ruudukko alueisiin, luoda alueiden sisälle huoneita ja sitten linkittää huoneet käytävillä.
-
-http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
 
 Projektin suunnittelu on vielä kesken (päivitän tätä dokumenttia tarkemmilla yksityiskohdilla) mutta tiedän pelistä ainakin seuraavat asiat:
 * Peli toimii ruudukossa.
