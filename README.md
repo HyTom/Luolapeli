@@ -6,7 +6,7 @@ Tehdään kurssia Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit (lop
 
 [Määrittelydokumentti](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/maarittelydokumentti.md)
 
-### Raportit
+#### Raportit
 
 [Viikkoraportti 1](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/viikkoraportti1.md)
 
