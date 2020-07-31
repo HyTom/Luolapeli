@@ -9,6 +9,10 @@ http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
 
 Eli ideana on jakaa ruudukko alueisiin, luoda alueiden sisälle huoneita ja sitten linkittää huoneet käytävillä.
 
+Minun tulee siis myös luoda jonkinlainen puu-rakenne jotta voin pitää yllä tietoa huoneiden sijainneista/käytävistä/alueista.
+
+Kirjoitan algoritmistä vielä tarkemman kuvauksen kun olen selvittänyt oman toteutukseni.
+
 Projektin suunnittelu on vielä kesken (päivitän tätä dokumenttia tarkemmilla yksityiskohdilla) mutta tiedän pelistä ainakin seuraavat asiat:
 * Peli toimii ruudukossa.
 * Peli on vuoropohjainen.
@@ -21,6 +25,9 @@ Lisäksi haluan että luolastossa on vähintää yksi vihollinen. Näinollen hal
 Laitan tähän tavoitteena olevat aika ja tilavaatimukset heti kun ne on selvillä.
 
 Lähteet:
+
 https://en.wikipedia.org/wiki/Binary_space_partitioning
+
 https://fi.wikipedia.org/wiki/Binary_space_partitioning
+
 http://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
