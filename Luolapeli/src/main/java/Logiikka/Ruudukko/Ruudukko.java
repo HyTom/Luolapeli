@@ -11,6 +11,10 @@ public class Ruudukko {
     private int[][] tyhja;
     private int koko;
 
+    /**
+     * Ruudukko pitää yllä tietoa jokaisesta ruudusta luolapelin kerroksessa.
+     * @param n ruudukon koko
+     */
     public Ruudukko(int n) {
         this.ruudukko = new Ruutu[n][n];
         this.tyhja = new int[n][n];
@@ -47,6 +51,10 @@ public class Ruudukko {
 
     public int getKoko() {
         return koko;
+    }
+
+    public void setRuudunAlue(int x, int y, int alue) {
+        this.ruudukko[x][y].setAlue(alue);
     }
     
 }
