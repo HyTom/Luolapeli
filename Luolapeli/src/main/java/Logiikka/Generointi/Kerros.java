@@ -32,7 +32,7 @@ public class Kerros {
      * 
      * @param taso antaa ruuduille AluePuusta alueen sen mukaan millä tasolla se on puussa. Jos annettu taso on isompi kuin alin taso, annetaan alin taso.
      */
-    void alueetRuudukkoon(int taso) {
+    public void alueetRuudukkoon(int taso) {
         if (taso > ap.MAXtaso) {
             taso = ap.MAXtaso;
         }

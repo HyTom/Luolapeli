@@ -1,7 +1,7 @@
-
 package Logiikka.Generointi;
 
 class Alue {
+
     private int id;
     private int x;
     private int y;
@@ -10,8 +10,9 @@ class Alue {
     private int koko;
 
     /**
-     * * Alue on palanen luolapelin kerrosta.
-     * Se sisältää tiedon huoneesta jonka se sisältää sekä sillä on jokin id.
+     * * Alue on palanen luolapelin kerrosta. Se sisältää tiedon huoneesta
+     * jonka se sisältää sekä sillä on jokin id.
+     *
      * @param id tunniste
      * @param x sijainnin x kordinaatti
      * @param y sijainnin Y kordinaatti
@@ -21,6 +22,8 @@ class Alue {
         this.id = id;
         this.x = x;
         this.y = y;
+        this.pituusx = pituusx;
+        this.pituusy = pituusy;
     }
 
     public int getKoko() {
@@ -34,9 +37,13 @@ class Alue {
     public int getY() {
         return y;
     }
-    
-    
-    
-    
-    
+
+    public int getPituusx() {
+        return pituusx;
+    }
+
+    public int getPituusy() {
+        return pituusy;
+    }
+
 }

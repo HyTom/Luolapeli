@@ -19,6 +19,11 @@ public class Ruudukko {
         this.ruudukko = new Ruutu[n][n];
         this.tyhja = new int[n][n];
         this.koko = n;
+        for (int x = 0; x < n; x++) {
+            for (int y = 0; y < n; y++) {
+                lisaaRuutu(x, y, 0);
+            }
+        }
     }
     
     /**
@@ -30,6 +35,7 @@ public class Ruudukko {
     public void lisaaRuutu(int x, int y, int arvo) {
         this.tyhja[x][y] = 1;
         Ruutu ruutu = new Ruutu(arvo);
+        this.ruudukko[x][y] = ruutu;
     }
     
     /**

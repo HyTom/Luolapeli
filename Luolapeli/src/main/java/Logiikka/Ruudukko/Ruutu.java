@@ -14,12 +14,12 @@ public class Ruutu {
         return arvo;
     }
 
-    public void setArvo(int arvo) {
-        this.arvo = arvo;
+    public void setArvo(int a) {
+        this.arvo = a;
     }
 
-    void setAlue(int alue) {
-        this.alue = alue;
+    void setAlue(int a) {
+        this.alue = a;
     }
 
     public int getAlue() {

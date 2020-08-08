@@ -53,16 +53,17 @@ public class Luolageneraattori {
         int m = 1;
         for (int i = 0; i < jakaumat; i++) {
             for (int j = n; j < m; j++) {
-                int px = alue[n];
-                System.out.println("k???" + k);
-                int s = r.nextInt(k);
+                int px = alue[n].getPituusx();
+                int py = alue[n].getPituusy();
                 int onkoPysty = r.nextInt(2);
                 if (onkoPysty == 1) {
-                    //alue[2 * j + 1] = new Alue(2 * j + 1, alue[j].getX(), alue[j].getY(), k - s, k);
-                    //alue[2 * j + 2] = new Alue(2 * j + 2, alue[j].getX() + (k-s), alue[j].getY(), s, k);
+                    int s = r.nextInt(px - 4) + 2;
+                    alue[2 * j + 1] = new Alue(2 * j + 1, alue[j].getX(), alue[j].getY(), px - s, py);
+                    alue[2 * j + 2] = new Alue(2 * j + 2, alue[j].getX() + px - s, alue[j].getY(), s, py);
                 } else {
-                    //alue[2 * j + 1] = new Alue(2 * j + 1, alue[j].getX(), alue[j].getY(), k - s);
-                    //alue[2 * j + 2] = new Alue(2 * j + 2, alue[j].getX(), alue[j].getY() + (k-s), s);
+                    int s = r.nextInt(py - 4) + 2;
+                    alue[2 * j + 1] = new Alue(2 * j + 1, alue[j].getX(), alue[j].getY(), px, py - s);
+                    alue[2 * j + 2] = new Alue(2 * j + 2, alue[j].getX(), alue[j].getY() + py - s, px, s);
                 }
             }
             n += m;
