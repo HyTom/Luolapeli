@@ -43,8 +43,8 @@ public class Kerros {
             System.out.println("aaaaaaaaaaaaa kun i = " + i + " ja alue: " + alue.getKoko());
             System.out.println("samalla x ja y: " + alue.getX() + " ja " + alue.getY());
             
-            for (int y = alue.getY(); y < alue.getKoko(); y++) {
-                for (int x = alue.getX(); x < alue.getKoko(); x++) {
+            for (int y = alue.getY(); y < alue.getPituusy(); y++) {
+                for (int x = alue.getX(); x < alue.getPituusx(); x++) {
                     this.ruudukko.setRuudunAlue(x, y, i);
                 }
             }
