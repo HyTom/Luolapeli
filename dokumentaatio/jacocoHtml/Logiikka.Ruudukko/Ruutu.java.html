@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ruutu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Luolapeli</a> &gt; <a href="index.source.html" class="el_package">Logiikka.Ruudukko</a> &gt; <span class="el_source">Ruutu.java</span></div><h1>Ruutu.java</h1><pre class="source lang-java linenums">
+package Logiikka.Ruudukko;
+
+/**
+ * Ruutu olio vastaa yhtä Luolapelin ruutua, johon voi (tai ei voi) liikkua ja joka sisältää 
+ * pelin objekteja. 
+ * @author htommi
+ */
+public class Ruutu {
+    private int arvo;
+    private int alue;
+    
+    /**
+     * Uusi Ruutu olio.
+     * @param i Ruudun arvo maarittaa voiko ruutuun liikkua. Jos arvo on 0,
+     * on kyseessä seinä.
+     */
+<span class="fc" id="L18">    public Ruutu(int i) {</span>
+<span class="fc" id="L19">        this.arvo = i;</span>
+<span class="fc" id="L20">        this.alue = 0;</span>
+<span class="fc" id="L21">    }</span>
+
+    public int getArvo() {
+<span class="fc" id="L24">        return arvo;</span>
+    }
+    
+    public void setArvo(int a) {
+<span class="fc" id="L28">        this.arvo = a;</span>
+<span class="fc" id="L29">    }</span>
+
+    void setAlue(int a) {
+<span class="fc" id="L32">        this.alue = a;</span>
+<span class="fc" id="L33">    }</span>
+
+    public int getAlue() {
+<span class="fc" id="L36">        return alue;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

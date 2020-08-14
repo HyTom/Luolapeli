@@ -22,32 +22,70 @@ public class AluePuuTestit {
     }
     
     @Test
-    public void antaakoOikeinMontaSolmuaTasolla1() {
-        AluePuu puu = new AluePuu(0, 1);
+    public void antaakoOikeinMontaSolmuaTasolla0() {
+        AluePuu puu = new AluePuu(10, 0);
         int i = puu.montaSolmuaTasolla(0);
         assertEquals(i, 1);
     }
     
     
     @Test
-    public void antaakoOikeinMontaSolmuaTasolla2() {
-        AluePuu puu = new AluePuu(0, 1);
+    public void antaakoOikeinMontaSolmuaTasolla1() {
+        AluePuu puu = new AluePuu(10, 1);
         int i = puu.montaSolmuaTasolla(1);
         assertEquals(i, 2);
     }
     
     
     @Test
-    public void antaakoOikeinMontaSolmuaTasolla3() {
-        AluePuu puu = new AluePuu(0, 1);
+    public void antaakoOikeinMontaSolmuaTasolla2() {
+        AluePuu puu = new AluePuu(10, 2);
         int i = puu.montaSolmuaTasolla(2);
         assertEquals(i, 4);
     }
     
      @Test
-    public void antaakoOikeinMontaSolmuaTasolla4() {
-        AluePuu puu = new AluePuu(0, 1);
-        int i = puu.montaSolmuaTasolla(2);
+    public void antaakoOikeinMontaSolmuaTasolla3() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.montaSolmuaTasolla(3);
         assertEquals(i, 8);
+    }
+    
+    @Test
+    public void antaakoOikeinMistaIndexAlkaa0() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(0);
+        assertEquals(i, 0);
+    }
+    
+    public void antaakoOikeinMistaIndexAlkaa1() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(0);
+        assertEquals(i, 0);
+    }
+    
+    public void antaakoOikeinMistaIndexAlkaa2() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(1);
+        assertEquals(i, 1);
+    }
+    
+    public void antaakoOikeinMistaIndexAlkaa3() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(2);
+        assertEquals(i, 3);
+    }
+    
+    public void antaakoOikeinMistaIndexAlkaa4() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(4);
+        assertEquals(i, 7);
+    }
+    
+    
+    public void antaakoOikeinMistaIndexAlkaa5() {
+        AluePuu puu = new AluePuu(10, 3);
+        int i = puu.indexMistaAlkaaTaso(5);
+        assertEquals(i, 15);
     }
 }

@@ -1,6 +1,6 @@
 package Logiikka.Generointi;
 
-class Alue {
+public class Alue {
 
     private int id;
     private int x;
@@ -8,6 +8,7 @@ class Alue {
     private int pituusx;
     private int pituusy;
     private int koko;
+    private int[][] huone;
 
     /**
      * * Alue on palanen luolapelin kerrosta. Se sisältää tiedon huoneesta
@@ -24,6 +25,16 @@ class Alue {
         this.y = y;
         this.pituusx = pituusx;
         this.pituusy = pituusy;
+        this.koko = pituusx * pituusy;
+        if (pituusx == 0 | pituusy == 0) {
+            huone = new int[1][1];
+        } else {
+            huone = new int[pituusx][pituusy];
+        }
+    }
+
+    public int getId() {
+        return id;
     }
 
     public int getKoko() {
@@ -44,6 +55,14 @@ class Alue {
 
     public int getPituusy() {
         return pituusy;
+    }
+
+    public int[][] getHuone() {
+        return huone;
+    }
+
+    int onkoKohdassaHuonetta(int x, int y) {
+        return huone[x][y];
     }
 
 }

@@ -1,7 +1,7 @@
 package Logiikka.Ruudukko;
 
 /**
- * 2D kartta
+ * 2D kartta joka pitää sisällään Ruutu olioita jotka tietävät oman sisältönsä.
  * @author htommi
  */
 
@@ -13,6 +13,7 @@ public class Ruudukko {
 
     /**
      * Ruudukko pitää yllä tietoa jokaisesta ruudusta luolapelin kerroksessa.
+     * Ruutu oliot on luotu valmiiksi.
      * @param n ruudukon koko
      */
     public Ruudukko(int n) {

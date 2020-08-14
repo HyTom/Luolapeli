@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AluePuu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Luolapeli</a> &gt; <a href="index.source.html" class="el_package">Logiikka.Generointi</a> &gt; <span class="el_source">AluePuu.java</span></div><h1>AluePuu.java</h1><pre class="source lang-java linenums">package Logiikka.Generointi;
+
+/**
+ *
+ * Luokka joka pitää yllä puurakennetta, jossa on helppo käsitellä Luolapelin
+ * kerroksia jotka on jaettu alueisiin. Syy puun olemassaololle on se, että
+ * aluista voi esimerkiksi helposti satunnaisesti valita mistä alueesta pelaaja
+ * aloittaa tai minne syntyy vihollisia nje. Helpottaa myös huoneiden
+ * yhdistämistä käytävillä.
+ *
+ * @author htommi
+ */
+public class AluePuu {
+
+    private Alue[] alueet;
+    final int MAXTASO;
+
+    /**
+     * Lue uuden AluePuu olion.
+     *
+     * @param jakauksia Monta kertaa halutaan kerros jakaa ali-Alueisiin, 0 = 1
+     * iso alue, 1 = alue jaettu kahteen, 2 = alue jaettu neljään ja niin
+     * edespäin, alinpien alialueiden määrä aina kaksinkertaistuu.
+     * @param koko Koko kerroksen koko.
+     */
+<span class="fc" id="L26">    public AluePuu(int koko, int jakauksia) {</span>
+<span class="fc" id="L27">        int s = 1;</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (jakauksia &gt; 0) {</span>
+<span class="fc" id="L29">            int a = 1;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            for (int i = 0; i &lt; jakauksia; i++) {</span>
+<span class="fc" id="L31">                a = a * 2;</span>
+<span class="fc" id="L32">                s += a;</span>
+            }
+        }
+<span class="fc" id="L35">        this.alueet = new Alue[s];</span>
+<span class="fc" id="L36">        Alue alue = new Alue(1, 0, 0, koko, koko);</span>
+<span class="fc" id="L37">        this.alueet[0] = alue;</span>
+<span class="fc" id="L38">        MAXTASO = jakauksia;</span>
+<span class="fc" id="L39">    }</span>
+
+    public Alue[] getAlueet() {
+<span class="fc" id="L42">        return alueet;</span>
+    }
+
+    /**
+     * Palauttaa solmujen maaran puun tasolla.
+     *
+     * @param taso.
+     * @return solmujen maara.
+     */
+    public int montaSolmuaTasolla(int taso) {
+<span class="fc" id="L52">        int p = 1;</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (int i = 0; i &lt; taso; i++) {</span>
+<span class="fc" id="L54">            p = p * 2;</span>
+        }
+<span class="fc" id="L56">        return p;</span>
+    }
+
+    /**
+     * Kertoo indeksin taulukosta josta alkaa haluttu taso.
+     *
+     * @param taso
+     * @return index tasolle
+     */
+    public int indexMistaAlkaaTaso(int taso) {
+<span class="fc" id="L66">        int p = 0;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (int i = 0; i &lt; taso; i++) {</span>
+<span class="fc" id="L68">            p += montaSolmuaTasolla(i);</span>
+        }
+<span class="fc" id="L70">        return p;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

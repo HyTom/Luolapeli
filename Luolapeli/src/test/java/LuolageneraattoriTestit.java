@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Logiikka.Generointi.Kerros;
 import Logiikka.Generointi.Luolageneraattori;
 import Logiikka.Ruudukko.Ruudukko;
 import org.junit.After;
@@ -22,13 +23,25 @@ public class LuolageneraattoriTestit {
     public LuolageneraattoriTestit() {
     }
     
+    @Test
+    public void luoKerrosOlion() {
+        Luolageneraattori lg = new Luolageneraattori();
+        Ruudukko r = lg.luoKerros(1, 1).getRuudukko();
+        Kerros kerros = new Kerros(0,0);
+        assertEquals(kerros.getClass(), lg.luoKerros(0, 0).getClass());
+    }
     
     @Test
     public void onkoLuotuKerrosJaettuOikein() {
         Luolageneraattori lg = new Luolageneraattori();
-        Ruudukko r = lg.luoKerros(1, 1, 10);
-        assertEquals(true, r.ruutuIsEmpty(0, 1));
-        assertEquals(false, r.ruutuIsEmpty(1, 1));
+        Kerros k = lg.luoKerros(1, 2);
+        Ruudukko r = k.getRuudukko();
+        assertEquals(r.getRuutu(0, 0).getAlue(), 1);
+        if (r.getRuutu(1, 0).getAlue() == 2) {
+            assertEquals(r.getRuutu(1, 0).getAlue(), 2);
+        } else {
+            assertEquals(r.getRuutu(0, 1).getAlue(), 2);
+        }
     }
 
 }
