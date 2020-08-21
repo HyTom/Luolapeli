@@ -26,9 +26,9 @@ public class LuolageneraattoriTestit {
     @Test
     public void luoKerrosOlion() {
         Luolageneraattori lg = new Luolageneraattori();
-        Ruudukko r = lg.luoKerros(1, 1).getRuudukko();
-        Kerros kerros = new Kerros(0,0);
-        assertEquals(kerros.getClass(), lg.luoKerros(0, 0).getClass());
+        Kerros r = lg.luoKerros(2, 2);
+        Kerros kerros = new Kerros(1,1);
+        assertEquals(kerros.getClass(), r.getClass());
     }
     
     @Test

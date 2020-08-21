@@ -24,7 +24,7 @@ public class HuonegeneraattoriTestit {
     public void metodiIsoinMahdollinenToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         hg.isoinMahdollinen(alue, huone);
         assertEquals(huone[0][0], 1);
         huone[0][0] = 0;
@@ -34,7 +34,7 @@ public class HuonegeneraattoriTestit {
     public void metodiNelioToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.nelio(alue, huone);
         assertEquals(huone[0][0], 1);
@@ -44,7 +44,7 @@ public class HuonegeneraattoriTestit {
     public void metodiPilareitaToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.pilareita(alue, huone);
         assertEquals(huone[0][0], 1);
@@ -54,7 +54,7 @@ public class HuonegeneraattoriTestit {
     public void metodiRistikkoToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.ristikko(alue, huone);
         assertEquals(huone[0][0], 1);
@@ -64,7 +64,7 @@ public class HuonegeneraattoriTestit {
     public void metodiTaysinRandomToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.taysinRandom(new Random(), alue, huone);
         assertEquals(huone[0][0], 1);
@@ -74,7 +74,7 @@ public class HuonegeneraattoriTestit {
     public void metodiTemppeliToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.temppeli(alue, huone);
         assertEquals(huone[0][0], 1);
@@ -84,7 +84,7 @@ public class HuonegeneraattoriTestit {
     public void metodiYksinainenToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         hg.yksinainen(alue, huone);
         assertEquals(huone[0][0], 1);
     }
@@ -93,7 +93,7 @@ public class HuonegeneraattoriTestit {
     public void metodiYmpyraToimiiPienillaluvuilla() {
         Huonegeneraattori hg = new Huonegeneraattori();
         int[][] huone = new int[1][1];
-        Alue alue = new Alue(0, 0, 0, 1, 1);
+        Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
         hg.ympyra(alue, huone);
         assertEquals(huone[0][0], 1);

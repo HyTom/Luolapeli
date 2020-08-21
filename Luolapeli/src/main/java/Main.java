@@ -16,7 +16,7 @@ public class Main {
 
         //Javan Random luokkaa ei periaatteessa saa käyttää, ja se korvataankin tulevaisuudessa nanotimella
         Random random = new Random();
-        int koko = 30;
+        int koko = 60;
         int jakaumat = 4;
         Kerros level1 = lg.luoKerros(jakaumat, koko);
 
@@ -44,15 +44,15 @@ public class Main {
         int k = level.getKoko();
         System.out.println("Huoneet:");
         for (int y = 0; y < k; y++) {
-            System.out.println("\n");
+            System.out.println("");
             for (int x = 0; x < k; x++) {
                 if (level.getRuutu(x, y).getArvo() >= 1) {
-                    System.out.print(level.getRuutu(x, y).getAlue() + " ");
+                    System.out.print(level.getRuutu(x, y).getAlue());
                     if (level.getRuutu(x, y).getAlue() < 10) {
                         System.out.print(" ");
                     }
                 } else {
-                    System.out.print(" - ");
+                    System.out.print("- ");
                 }
             }
         }
