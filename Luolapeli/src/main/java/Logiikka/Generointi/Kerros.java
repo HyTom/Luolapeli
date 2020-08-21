@@ -39,7 +39,7 @@ public class Kerros {
      * @param taso antaa ruuduille AluePuusta alueen sen mukaan millä tasolla se
      * on puussa. Jos annettu taso on isompi kuin alin taso, annetaan alin taso.
      */
-    public void alueetRuudukkoon(int taso) {
+    public void alueetRuudukkoon2(int taso) {
         if (taso > ap.MAXTASO) {
             taso = ap.MAXTASO;
         }
@@ -53,6 +53,15 @@ public class Kerros {
                     this.ruudukko.setRuudunAlue(x, y, i);
                     this.ruudukko.getRuutu(x, y).setArvo(alue.onkoKohdassaHuonetta(x - alue.getX(), y - alue.getY()));
                 }
+            }
+        }
+    }
+
+    void alueetRuudukkoon() {
+        for (int y = 0; y < this.getRuudukko().getKoko(); y++) {
+            for (int x = 0; x < this.getRuudukko().getKoko(); x++) {
+                this.ruudukko.setRuudunAlue(x, y, ap.getAlueet()[0].getHuone()[x][y]);
+                this.ruudukko.setRuudunArvo(x, y, ap.getAlueet()[0].getHuone()[x][y]);
             }
         }
     }

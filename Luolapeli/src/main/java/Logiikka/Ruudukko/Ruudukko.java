@@ -64,4 +64,8 @@ public class Ruudukko {
         this.ruudukko[x][y].setAlue(alue);
     }
     
+    public void setRuudunArvo(int x, int y, int arvo) {
+        this.ruudukko[x][y].setArvo(arvo);
+    }
+    
 }

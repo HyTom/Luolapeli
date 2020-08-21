@@ -9,6 +9,7 @@ public class Alue {
     private int pituusy;
     private int koko;
     private int[][] huone;
+    private boolean onkoPysty;
 
     /**
      * * Alue on palanen luolapelin kerrosta. Se sisältää tiedon huoneesta
@@ -17,7 +18,9 @@ public class Alue {
      * @param id tunniste
      * @param x sijainnin x kordinaatti
      * @param y sijainnin Y kordinaatti
-     * @param koko kuinka monta ruutua alue jatkuu alas ja oikealle
+     * @param pituusx Pituus sivusuunnassa
+     * @param pituusy Pituus pysysuunnassa
+     * @param onkoPysty Onko leikattu pystysuunnassa
      */
     public Alue(int id, int x, int y, int pituusx, int pituusy) {
         this.id = id;
@@ -31,6 +34,14 @@ public class Alue {
         } else {
             huone = new int[pituusx][pituusy];
         }
+    }
+
+    public boolean isOnkoPysty() {
+        return onkoPysty;
+    }
+
+    public void setOnkoPysty(boolean onkoPysty) {
+        this.onkoPysty = onkoPysty;
     }
 
     public int getId() {

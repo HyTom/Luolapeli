@@ -33,7 +33,7 @@ public class AluePuu {
             }
         }
         this.alueet = new Alue[s];
-        Alue alue = new Alue(1, 0, 0, koko, koko);
+        Alue alue = new Alue(0, 0, 0, koko, koko);
         this.alueet[0] = alue;
         MAXTASO = jakauksia;
     }
