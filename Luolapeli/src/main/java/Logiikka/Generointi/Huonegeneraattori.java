@@ -22,7 +22,7 @@ public class Huonegeneraattori {
             Random r = new Random();
             int a = r.nextInt(10);
             if (edellinen == a) {
-                a = r.nextInt(10);
+                a = r.nextInt(11);
             } else {
                 edellinen = a;
             }
@@ -54,6 +54,9 @@ public class Huonegeneraattori {
                     break;
                 case 8: 
                     isohkoHuone(alue, huone);
+                    break;
+                case 9:
+                    pieniHuoneJaRistikko(alue, huone);
                     break;
                 default:
                     taysinRandom(r, alue, huone);
@@ -180,6 +183,11 @@ public class Huonegeneraattori {
                 }
             }
         }
+    }
+
+    private void pieniHuoneJaRistikko(Alue alue, int[][] huone) {
+        ristikko(alue, huone);
+        pienihuone(alue, huone);
     }
 
 }

@@ -2,6 +2,7 @@
 import Logiikka.Generointi.Luolageneraattori;
 import Logiikka.Ruudukko.Ruudukko;
 import Logiikka.Generointi.Kerros;
+import UI.PeliSovellus;
 import java.util.Random;
 
 public class Main {
@@ -13,12 +14,16 @@ public class Main {
         //luolan jakaminen ei johda alusta lähtien liian ahtaisiin jakaumiin.
 
         Luolageneraattori lg = new Luolageneraattori();
-
+        
+        
         //Javan Random luokkaa ei periaatteessa saa käyttää, ja se korvataankin tulevaisuudessa nanotimella
         Random random = new Random();
-        int koko = 60;
-        int jakaumat = 4;
+        int koko = 50;
+        int jakaumat = 3;
         Kerros level1 = lg.luoKerros(jakaumat, koko);
+        PeliSovellus peliSovellus = new PeliSovellus();
+        peliSovellus.annaKerros(level1);
+        peliSovellus.aloita();
 
         //Luolan tulostaminen ennen UI:ta.
         System.out.println("Luolan koko: " + koko + "\n");

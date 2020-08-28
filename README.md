@@ -20,6 +20,8 @@ Tehdään kurssia Aineopintojen harjoitustyö: Tietorakenteet ja algoritmit (lop
 
 [Viikkoraportti 5](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/viikkoraportti5.md)
 
+[Viikkoraportti 6](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/viikkoraportti6.md)
+
 ## Yleistä
 
 Projekti on jonkinlainen yksinkertainen luolapeli ja se on koodattu javalla. Yksityiskohtia ei ole vielä päätetty, mutta tarkoituksen on liikuttaa hahmoa sokkelossa ja löytää portaat seuraavaan kerrokseen. Peli generoi aina satunnaisen luolaston per kerros. 
