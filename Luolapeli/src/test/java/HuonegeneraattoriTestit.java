@@ -6,6 +6,7 @@
 
 import Logiikka.Generointi.Alue;
 import Logiikka.Generointi.Huonegeneraattori;
+import Logiikka.Generointi.Satunnainen;
 import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -66,7 +67,7 @@ public class HuonegeneraattoriTestit {
         int[][] huone = new int[1][1];
         Alue alue = new Alue(1, 0, 0, 1, 1);
         huone[0][0] = 0;
-        hg.taysinRandom(new Random(), alue, huone);
+        hg.taysinRandom(new Satunnainen(10), alue, huone);
         assertEquals(huone[0][0], 1);
     }
 
