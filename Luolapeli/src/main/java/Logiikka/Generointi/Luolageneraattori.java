@@ -1,7 +1,5 @@
 package Logiikka.Generointi;
 
-import java.util.Random;
-
 /**
  * Luokka joka hallitsee Luolapeliin generoitavien luolien luomisesta.
  *
@@ -9,13 +7,13 @@ import java.util.Random;
  */
 public class Luolageneraattori {
 
-    private Random r;
+    private Satunnainen r;
 
     /**
      * Luokka joka hallitsee Luolapeliin generoitavien luolien luomisesta.
      */
     public Luolageneraattori() {
-        r = new Random();
+        r = new Satunnainen(10);
     }
 
     /**
@@ -66,7 +64,7 @@ public class Luolageneraattori {
         int m = 1;
         for (int i = 0; i < jakaumat; i++) {
             for (int j = n; j < m; j++) {
-                int onkoPysty = r.nextInt(2);
+                int onkoPysty = r.uusiInt(2);
                 if (alue[j].getPituusx() == 1) {
                     onkoPysty = 0;
                 }
@@ -98,7 +96,7 @@ public class Luolageneraattori {
     }
 
     private int annaSopivaJakauma(int p, int j) {
-        int a = r.nextInt(p);
+        int a = r.uusiInt(p);
         if (a >= p - j) {
             a = p - j;
         }
@@ -168,10 +166,6 @@ public class Luolageneraattori {
             Alue eka = ap.getAlueet()[j * 2 + 1];
             Alue toka = ap.getAlueet()[j * 2 + 2];
             Alue master = ap.getAlueet()[j];
-            System.out.println("master id: " + master.getId());
-            System.out.println("eka pituusx ja y: " + eka.getPituusx() + ", " + eka.getPituusy());
-            System.out.println("toka pituusx ja y: " + toka.getPituusx() + ", " + toka.getPituusy());
-            System.out.println("master pituusx ja y: " + master.getPituusx() + ", " + master.getPituusy());
             for (int y = 0; y < eka.getPituusy(); y++) {
                 for (int x = 0; x < eka.getPituusx(); x++) {
                     if (eka.getHuone()[x][y] >= 1) {
@@ -233,9 +227,6 @@ public class Luolageneraattori {
                 break;
             }
         }
-        System.out.println("vasen (" + eka.getId() + ") x ja y: " + ekax + ", " + ekay);
-        System.out.println("oikea (" + toka.getId() + ") x ja y: " + tokax + ", " + tokay);
-        System.out.println("----");
         for (int x = ekax; x < eka.getPituusx(); x++) {
             eka.getHuone()[x][ekay] = eka.getId();
         }
@@ -284,9 +275,6 @@ public class Luolageneraattori {
                 break;
             }
         }
-        System.out.println("vasen (" + eka.getId() + ") x ja y: " + ekax + ", " + ekay);
-        System.out.println("oikea (" + toka.getId() + ") x ja y: " + tokax + ", " + tokay);
-        System.out.println("||||");
         for (int y = ekay; y < eka.getPituusy(); y++) {
             eka.getHuone()[ekax][y] = eka.getId();
         }

@@ -1,6 +1,7 @@
 package Logiikka.Generointi;
 
 import Logiikka.Ruudukko.Ruudukko;
+import Logiikka.Ruudukko.Ruutu;
 
 /**
  * Olio on vastuussa Luolapelin koko kerroksen kaikesta tiedosta ja sen
@@ -25,7 +26,19 @@ public class Kerros {
         ap = new AluePuu(koko, jakauksia);
     }
 
-    AluePuu getAluePuu() {
+    /**
+     * Paivittaa ruuduille tiedon siitä, millä alueella ne ovat.
+     */
+    public void alueetRuudukkoon() {
+        for (int y = 0; y < this.getRuudukko().getKoko(); y++) {
+            for (int x = 0; x < this.getRuudukko().getKoko(); x++) {
+                this.ruudukko.setRuudunAlue(x, y, ap.getAlueet()[0].getHuone()[x][y]);
+                this.ruudukko.setRuudunArvo(x, y, ap.getAlueet()[0].getHuone()[x][y]);
+            }
+        }
+    }
+
+    public AluePuu getAluePuu() {
         return ap;
     }
 
@@ -33,37 +46,22 @@ public class Kerros {
         return ruudukko;
     }
 
-    /**
-     * Paivittaa ruuduille tiedon siitä, millä alueella ne ovat.
-     *
-     * @param taso antaa ruuduille AluePuusta alueen sen mukaan millä tasolla se
-     * on puussa. Jos annettu taso on isompi kuin alin taso, annetaan alin taso.
-     */
-    public void alueetRuudukkoon2(int taso) {
-        if (taso > ap.MAXTASO) {
-            taso = ap.MAXTASO;
+    public Alue[] getAlimmatAlueet() {
+        int a = ap.indexMistaAlkaaTaso(ap.MAXTASO);
+        int k = ap.montaSolmuaTasolla(ap.MAXTASO);
+        Alue[] alimmat = new Alue[k];
+        int i = 0;
+        for (int p = a; p < k + a; p++) {
+            alimmat[i] = ap.getAlueet()[p];
+            i++;
         }
-        int a = ap.montaSolmuaTasolla(taso);
-        int b = ap.indexMistaAlkaaTaso(taso);
-        for (int i = b; i < a + b; i++) {
-            Alue alue = ap.getAlueet()[i];
-
-            for (int y = alue.getY(); y < alue.getY() + alue.getPituusy(); y++) {
-                for (int x = alue.getX(); x < alue.getX() + alue.getPituusx(); x++) {
-                    this.ruudukko.setRuudunAlue(x, y, i);
-                    this.ruudukko.getRuutu(x, y).setArvo(alue.onkoKohdassaHuonetta(x - alue.getX(), y - alue.getY()));
-                }
-            }
-        }
+        return alimmat;
     }
 
-    void alueetRuudukkoon() {
-        for (int y = 0; y < this.getRuudukko().getKoko(); y++) {
-            for (int x = 0; x < this.getRuudukko().getKoko(); x++) {
-                this.ruudukko.setRuudunAlue(x, y, ap.getAlueet()[0].getHuone()[x][y]);
-                this.ruudukko.setRuudunArvo(x, y, ap.getAlueet()[0].getHuone()[x][y]);
-            }
-        }
+    public Ruutu annaSijaintiAlueesta(int id) {
+        Alue alue = this.ap.getAlueet()[id];
+        Ruutu ruutu = alue.annaEkaTyhjaRuutu();
+        return ruutu;
     }
 
 }

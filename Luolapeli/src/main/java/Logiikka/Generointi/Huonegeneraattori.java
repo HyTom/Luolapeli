@@ -1,14 +1,12 @@
 package Logiikka.Generointi;
 
-import java.util.Random;
-
 public class Huonegeneraattori {
+
     private int edellinen;
 
     public Huonegeneraattori() {
         this.edellinen = -1;
     }
-    
 
     /**
      * Luo alueeseen satunnaisen huoneen. Metodit ovat public testejä varten.
@@ -19,10 +17,10 @@ public class Huonegeneraattori {
         if (alue.getPituusx() == 0 | alue.getPituusy() == 0) {
             yksinainen(alue, alue.getHuone());
         } else {
-            Random r = new Random();
-            int a = r.nextInt(10);
+            Satunnainen s = new Satunnainen(10);
+            int a = s.uusiInt();
             if (edellinen == a) {
-                a = r.nextInt(11);
+                a = s.uusiInt(11);
             } else {
                 edellinen = a;
             }
@@ -52,22 +50,22 @@ public class Huonegeneraattori {
                 case 7:
                     pienihuone(alue, huone);
                     break;
-                case 8: 
+                case 8:
                     isohkoHuone(alue, huone);
                     break;
                 case 9:
                     pieniHuoneJaRistikko(alue, huone);
                     break;
                 default:
-                    taysinRandom(r, alue, huone);
+                    taysinRandom(s, alue, huone);
                     break;
             }
         }
     }
 
-    public void taysinRandom(Random r, Alue alue, int[][] huone) {
-        int rx = r.nextInt(alue.getPituusx());
-        int ry = r.nextInt(alue.getPituusy());
+    public void taysinRandom(Satunnainen r, Alue alue, int[][] huone) {
+        int rx = r.uusiInt(alue.getPituusx());
+        int ry = r.uusiInt(alue.getPituusy());
         for (int y = 0; y < alue.getPituusy(); y++) {
             for (int x = 0; x < alue.getPituusx(); x++) {
                 if (x >= rx & y >= ry) {
@@ -104,11 +102,13 @@ public class Huonegeneraattori {
             }
         }
     }
-/**
- * Vasemmasta yläkulmasta alkava neliö
- * @param alue vaaditaan generointiin
- * @param huone vaaditaan generointiin
- */
+
+    /**
+     * Vasemmasta yläkulmasta alkava neliö
+     *
+     * @param alue vaaditaan generointiin
+     * @param huone vaaditaan generointiin
+     */
     public void nelio(Alue alue, int[][] huone) {
         int px = alue.getPituusx();
         int py = alue.getPituusy();
@@ -172,7 +172,7 @@ public class Huonegeneraattori {
             }
         }
     }
-    
+
     private void isohkoHuone(Alue alue, int[][] huone) {
         int palax = alue.getPituusx() / 5;
         int palay = alue.getPituusy() / 5;

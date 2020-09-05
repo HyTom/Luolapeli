@@ -46,10 +46,7 @@ public class Ruudukko {
      * @return 
      */
     public boolean ruutuIsEmpty(int x, int y) {
-        if (this.tyhja[x][y] == 0) {
-            return true;
-        }
-        return false;
+        return this.tyhja[x][y] <= 0;
     }
     
     public Ruutu getRuutu(int x, int y) {

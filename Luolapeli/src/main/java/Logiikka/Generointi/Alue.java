@@ -1,5 +1,7 @@
 package Logiikka.Generointi;
 
+import Logiikka.Ruudukko.Ruutu;
+
 public class Alue {
 
     private int id;
@@ -74,6 +76,19 @@ public class Alue {
 
     int onkoKohdassaHuonetta(int x, int y) {
         return huone[x][y];
+    }
+
+    Ruutu annaEkaTyhjaRuutu() {
+        Ruutu ruutu = new Ruutu(1);
+        for (int hy = 0; hy < this.pituusy; hy++) {
+            for (int hx = 0; hx < this.pituusx; hx++) {
+                if (this.huone[hx][hy] > 0) {
+                    ruutu.setXjaY(hx + this.x, hy + this.y);
+                    return ruutu;
+                }
+            }
+        }
+        return ruutu;
     }
 
 }
