@@ -1,6 +1,12 @@
 apply plugin: 'java'
 apply plugin: 'jacoco'
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled = true

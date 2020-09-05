@@ -8,13 +8,15 @@ Peli alkaa heti ohjelman käynnistyessä. Paina U nappia ("u" niinkuin "uusi") n
 Tavoitteena on päästä keltaiselle neliölle, joka vie sinut uuteen kenttään ja saat pisteen.
 Kuollessa joudut uuteen kenttään. Hirviöt osaavat katsoa 8 suuntaan, käytä tätä hiipailussa hyväksi.
 
+Joskus ruudukko on todella iso, tällöin kannattaa venyttä ikkunaa isommaksi.
+
 ## Dokumentaatio
 
 [Määrittelydokumentti](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/maarittelydokumentti.md)
 
 [Testausdokumentti](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/testausdokumentti.md)
 
-[Toteutusdokumentti](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/toteutusdokumentti.md)
+[Toteutusdokumentti](https://github.com/HyTom/Luolapeli/blob/master/dokumentaatio/Toteutusdokumentti.md)
 
 #### Raportit
 
